@@ -9,6 +9,13 @@ import 'package:iot_thai_moneyshare_project/view/c02_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/c03_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/d01_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/d02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d04_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d05_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d06_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d07_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e02_page_ui.dart';
 import 'view/home_ui.dart';
 
 void main() {
@@ -29,7 +36,7 @@ class _flutter_speed_ui_appState extends State<flutter_speed_ui_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: D02(),
+      home: E02(),
     );
   }
 }
