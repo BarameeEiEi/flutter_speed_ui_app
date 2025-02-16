@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/a01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/b01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/c01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e01_page_ui.dart';
 
 class HomeUI extends StatefulWidget {
   const HomeUI({super.key});
@@ -30,15 +35,12 @@ class _HomeUIState extends State<HomeUI> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.03),
               ElevatedButton(
-                onPressed: () {},
-                // ignore: sort_child_properties_last
-                child: Text(
-                  'Go to A Page',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => A01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(
                     MediaQuery.of(context).size.width,
@@ -51,18 +53,22 @@ class _HomeUIState extends State<HomeUI> {
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-              ElevatedButton(
-                onPressed: () {},
-                // ignore: sort_child_properties_last
                 child: Text(
-                  'Go to B Page',
+                  'Go to A Page',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => B01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(
                     MediaQuery.of(context).size.width,
@@ -75,18 +81,22 @@ class _HomeUIState extends State<HomeUI> {
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-              ElevatedButton(
-                onPressed: () {},
-                // ignore: sort_child_properties_last
                 child: Text(
-                  'Go to C Page',
+                  'Go to B Page',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => C01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(
                     MediaQuery.of(context).size.width,
@@ -99,18 +109,22 @@ class _HomeUIState extends State<HomeUI> {
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-              ElevatedButton(
-                onPressed: () {},
-                // ignore: sort_child_properties_last
                 child: Text(
-                  'Go to D Page',
+                  'Go to C Page',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(
                     MediaQuery.of(context).size.width,
@@ -123,18 +137,22 @@ class _HomeUIState extends State<HomeUI> {
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-              ElevatedButton(
-                onPressed: () {},
-                // ignore: sort_child_properties_last
                 child: Text(
-                  'Go to E Page',
+                  'Go to D Page',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => E01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(
                     MediaQuery.of(context).size.width,
@@ -145,6 +163,13 @@ class _HomeUIState extends State<HomeUI> {
                     borderRadius: BorderRadius.circular(
                       10,
                     ),
+                  ),
+                ),
+                child: Text(
+                  'Go to E Page',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),

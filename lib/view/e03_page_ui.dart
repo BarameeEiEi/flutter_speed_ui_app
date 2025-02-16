@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class E02 extends StatefulWidget {
-  const E02({super.key});
+class E03 extends StatefulWidget {
+  const E03({super.key});
 
   @override
-  State<E02> createState() => _E02State();
+  State<E03> createState() => _E03State();
 }
 
-bool _isChecked = false;
-
-class _E02State extends State<E02> {
+class _E03State extends State<E03> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +17,7 @@ class _E02State extends State<E02> {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/imge2.png', // ใส่รูปภาพของคุณ
+                  'assets/images/imge2.png',
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.4,
                   fit: BoxFit.cover,
@@ -43,29 +41,27 @@ class _E02State extends State<E02> {
                 ),
               ],
             ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome back',
+                    'Register',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 5),
                   Text(
-                    'Login to your account',
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: const Color.fromARGB(255, 0, 0, 0)),
+                    'Create your new account',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   TextField(
                     decoration: InputDecoration(
-                      labelText: 'Enter email or phone',
+                      labelText: 'Name',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -73,47 +69,86 @@ class _E02State extends State<E02> {
                   ),
                   SizedBox(height: 10),
                   TextField(
-                    obscureText: true,
+                    decoration: InputDecoration(
+                      labelText: 'E-mail',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Phone',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  TextField(
                     decoration: InputDecoration(
                       labelText: 'Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      suffixIcon: Icon(Icons.visibility_off),
                     ),
                   ),
                   SizedBox(height: 10),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Checkbox(
-                        value: _isChecked,
-                        onChanged: (value) {
-                          setState(() {
-                            _isChecked = value!;
-                          });
-                        },
-                        activeColor: Colors.orange,
+                      Text(
+                        'By signing up you agree to our',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontSize: MediaQuery.of(context).size.width * 0.035,
+                        ),
                       ),
-                      Text('Remember me'),
-                      Spacer(),
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Forgot Password?',
-                            style: TextStyle(
-                              color: Colors.orange,
-                              fontWeight: FontWeight.bold,
-                              fontSize:
-                                  MediaQuery.of(context).size.width * 0.035,
-                            ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Terms & Conditions',
+                          style: TextStyle(
+                            color: Colors.orange,
+                            fontWeight: FontWeight.bold,
+                            fontSize: MediaQuery.of(context).size.width * 0.035,
                           ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 1),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'and',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontSize: MediaQuery.of(context).size.width * 0.035,
+                        ),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Privacy Policy',
+                          style: TextStyle(
+                            color: Colors.orange,
+                            fontWeight: FontWeight.bold,
+                            fontSize: MediaQuery.of(context).size.width * 0.035,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
                   SizedBox(
                     width: double.infinity,
                     height: 50,
@@ -126,7 +161,7 @@ class _E02State extends State<E02> {
                         ),
                       ),
                       child: Text(
-                        'Log In',
+                        'Sign Up',
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
@@ -135,7 +170,18 @@ class _E02State extends State<E02> {
                   Row(
                     children: [
                       Expanded(
-                        child: Divider(thickness: 1, color: Colors.grey[300]),
+                        child: Container(
+                          height: 1,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(0, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10),
@@ -145,7 +191,18 @@ class _E02State extends State<E02> {
                         ),
                       ),
                       Expanded(
-                        child: Divider(thickness: 1, color: Colors.grey[300]),
+                        child: Container(
+                          height: 1,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(0, 255, 165, 0),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -180,16 +237,16 @@ class _E02State extends State<E02> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Don\'t have an Account? ',
+                        'Already have an Account?',
                         style: TextStyle(
-                          color: const Color.fromARGB(255, 0, 0, 0),
+                          color: Color.fromARGB(255, 0, 0, 0),
                           fontSize: MediaQuery.of(context).size.width * 0.035,
                         ),
                       ),
                       TextButton(
                         onPressed: () {},
                         child: Text(
-                          'Create Account',
+                          'Log in',
                           style: TextStyle(
                             color: Colors.orange,
                             fontWeight: FontWeight.bold,

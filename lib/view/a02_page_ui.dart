@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/a01_page_ui.dart';
 
 class A02 extends StatefulWidget {
   const A02({super.key});
@@ -17,7 +18,19 @@ class _A02State extends State<A02> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Header
+            Align(
+              alignment: Alignment.centerLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  size: MediaQuery.of(context).size.height * 0.04,
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
             Text(
               "Welcome Back",
               style: TextStyle(
@@ -37,6 +50,7 @@ class _A02State extends State<A02> {
             ),
             SizedBox(height: 30),
             TextField(
+              keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 hintText: "Username , Email & Phone Number",
                 filled: true,
@@ -77,7 +91,12 @@ class _A02State extends State<A02> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => A01()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.pink,
                   shape: RoundedRectangleBorder(
@@ -97,14 +116,39 @@ class _A02State extends State<A02> {
             Row(
               children: [
                 Expanded(
-                  child: Divider(thickness: 1, color: Colors.grey[300]),
+                  child: Container(
+                    height: 1,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(0, 255, 165, 0),
+                          Color.fromARGB(128, 252, 35, 198),
+                          Color.fromARGB(128, 252, 35, 198),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text("Or Sign up With"),
+                  child: Text(
+                    "Or Sign Up With",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
                 Expanded(
-                  child: Divider(thickness: 1, color: Colors.grey[300]),
+                  child: Container(
+                    height: 1,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(128, 252, 35, 198),
+                          Color.fromARGB(128, 252, 35, 198),
+                          Color.fromARGB(0, 255, 165, 0),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
