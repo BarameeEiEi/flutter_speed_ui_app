@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iot_thai_moneyshare_project/view/b02_page_ui.dart';
-import 'package:iot_thai_moneyshare_project/view/b03_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/c02_page_ui.dart';
 
 class C03 extends StatefulWidget {

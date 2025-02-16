@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iot_thai_moneyshare_project/view/d01_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/d03_page_ui.dart';
 import 'package:iot_thai_moneyshare_project/view/d04_page_ui.dart';
-import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class D02 extends StatefulWidget {
   const D02({super.key});

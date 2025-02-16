@@ -15,7 +15,7 @@ class _E01State extends State<E01> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,20 +32,17 @@ class _E01State extends State<E01> {
                 icon: Icon(
                   Icons.arrow_back_ios,
                   size: MediaQuery.of(context).size.height * 0.04,
-                  color: const Color.fromARGB(255, 0, 0, 0),
+                  color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
             ),
             Image.asset(
-              'assets/images/imge1.png', // Replace with your image asset path
+              'assets/images/imge1.png',
               height: 400,
             ),
             SizedBox(height: 20),
-
-            // ข้อความ BERRY JUICE มีขอบสีส้ม
             Stack(
               children: [
-                // ข้อความขอบสีส้ม (วางซ้อนเป็นเลเยอร์ล่าง)
                 Text(
                   'BERRY JUICE',
                   style: TextStyle(
@@ -55,29 +52,27 @@ class _E01State extends State<E01> {
                     foreground: Paint()
                       ..style = PaintingStyle.stroke
                       ..strokeWidth = 4
-                      ..color = Colors.orange, // สีขอบ
+                      ..color = Colors.orange,
                   ),
                   textAlign: TextAlign.center,
                 ),
-                // ข้อความปกติ (วางซ้อนเป็นเลเยอร์บน)
                 Text(
                   'BERRY JUICE',
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Serif',
-                    color: Colors.black, // สีของตัวหนังสือ
+                    color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 ),
               ],
             ),
-
             SizedBox(height: 10),
             Text(
               'A "Moments of healthy sip"\nThe best vitamin for your health',
-              style: TextStyle(
-                  fontSize: 14, color: const Color.fromARGB(255, 0, 0, 0)),
+              style:
+                  TextStyle(fontSize: 14, color: Color.fromARGB(255, 0, 0, 0)),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 45),
@@ -103,8 +98,7 @@ class _E01State extends State<E01> {
                     Text(
                       'Explore Now',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 0, 0, 0),
-                          fontSize: 16),
+                          color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                     ),
                     SizedBox(width: 10),
                     Align(
