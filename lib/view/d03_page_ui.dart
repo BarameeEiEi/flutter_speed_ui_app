@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d02_page_ui.dart';
 
 class D03 extends StatefulWidget {
   const D03({super.key});
@@ -137,7 +138,12 @@ class _D03State extends State<D03> {
               children: [
                 Text("Already have an account? "),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => D02()),
+                    );
+                  },
                   child: Text(
                     'Login Now',
                     style: TextStyle(

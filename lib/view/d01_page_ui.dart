@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class D01 extends StatefulWidget {
   const D01({super.key});
@@ -24,6 +27,22 @@ class _D01State extends State<D01> {
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: MediaQuery.of(context).size.height * 0.04,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+            ),
+          ),
           Expanded(
             flex: 2,
             child: Container(
@@ -41,7 +60,12 @@ class _D01State extends State<D01> {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => D02()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 14),
                           backgroundColor: Color(0xFF212121), // สีเทาเข้ม
@@ -55,11 +79,16 @@ class _D01State extends State<D01> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 12),
+                    SizedBox(height: 14),
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => D03()),
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 14),
                           shape: RoundedRectangleBorder(

@@ -16,7 +16,6 @@ class _A02State extends State<A02> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Align(
               alignment: Alignment.centerLeft,
@@ -31,6 +30,7 @@ class _A02State extends State<A02> {
                 ),
               ),
             ),
+            SizedBox(height: 40),
             Text(
               "Welcome Back",
               style: TextStyle(
@@ -98,7 +98,7 @@ class _A02State extends State<A02> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink,
+                  backgroundColor: const Color.fromARGB(255, 255, 149, 228),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -111,8 +111,6 @@ class _A02State extends State<A02> {
               ),
             ),
             SizedBox(height: 20),
-
-            // Or Sign up With
             Row(
               children: [
                 Expanded(

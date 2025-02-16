@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iot_thai_moneyshare_project/view/a02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class A01 extends StatefulWidget {
   const A01({super.key});
@@ -16,7 +17,6 @@ class _A01State extends State<A01> {
       body: Stack(
         children: [
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 flex: 4,
@@ -111,7 +111,10 @@ class _A01State extends State<A01> {
             left: 10,
             child: IconButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
               },
               icon: Icon(
                 Icons.arrow_back_ios,

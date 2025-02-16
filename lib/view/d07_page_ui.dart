@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d02_page_ui.dart';
 
 class D07 extends StatefulWidget {
   const D07({super.key});
@@ -37,7 +38,12 @@ class _D07State extends State<D07> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D02()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 child: Text(
                   'Back to Login',

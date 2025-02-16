@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/b02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/b03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class B01 extends StatefulWidget {
   const B01({super.key});
@@ -15,20 +18,37 @@ class _B01State extends State<B01> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: MediaQuery.of(context).size.height * 0.04,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+            ),
+          ),
+          SizedBox(height: 40),
           Image.asset(
             'assets/images/imgb1.png',
             height: MediaQuery.of(context).size.height * 0.4,
           ),
           SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             child: Column(
               children: [
                 Text(
                   "Discover Your\nDream Job here",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 32, 92, 196),
+                    color: Color.fromARGB(255, 32, 92, 196),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
@@ -48,14 +68,19 @@ class _B01State extends State<B01> {
           ),
           SizedBox(height: 40),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => B02()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 10, 107, 185),
+                      backgroundColor: Color.fromARGB(255, 10, 107, 185),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -73,9 +98,14 @@ class _B01State extends State<B01> {
                 SizedBox(width: 10),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => B03()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                      backgroundColor: Color.fromARGB(255, 255, 255, 255),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -93,8 +123,7 @@ class _B01State extends State<B01> {
               ],
             ),
           ),
-
-          SizedBox(height: 30), // ระยะห่างจากขอบล่าง
+          SizedBox(height: 30),
         ],
       ),
     );

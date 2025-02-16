@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/c03_page_ui.dart';
 
 class C02 extends StatefulWidget {
   const C02({super.key});
@@ -18,6 +19,19 @@ class _C02State extends State<C02> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: MediaQuery.of(context).size.height * 0.04,
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                ),
                 Align(
                   child: Container(
                     padding: EdgeInsets.all(6),
@@ -63,9 +77,7 @@ class _C02State extends State<C02> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Sign in action
-                    },
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(vertical: 14),
                       backgroundColor: Colors.green,
@@ -119,11 +131,16 @@ class _C02State extends State<C02> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => C03()),
+                        );
+                      },
                       child: Text(
                         'Sign Up',
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Colors.green,
                           fontWeight: FontWeight.bold,
                           fontSize: MediaQuery.of(context).size.width * 0.035,
                         ),

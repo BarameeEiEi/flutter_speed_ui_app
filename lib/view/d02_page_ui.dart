@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d04_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class D02 extends StatefulWidget {
   const D02({super.key});
@@ -21,7 +25,10 @@ class _D02State extends State<D02> {
               alignment: Alignment.centerLeft,
               child: IconButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D01()),
+                  );
                 },
                 icon: Icon(
                   Icons.arrow_back_ios,
@@ -46,7 +53,7 @@ class _D02State extends State<D02> {
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                hintText: 'Enter your password',
+                hintText: '  Enter your password',
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 isCollapsed: true,
@@ -59,7 +66,12 @@ class _D02State extends State<D02> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D04()),
+                  );
+                },
                 child: Text('Forgot Password?'),
               ),
             ),
@@ -77,7 +89,20 @@ class _D02State extends State<D02> {
               ),
             ),
             SizedBox(height: 20),
-            Text('Or Login with'),
+            Row(
+              children: [
+                Expanded(
+                  child: Divider(thickness: 1, color: Colors.grey[300]),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: Text("Or Login with"),
+                ),
+                Expanded(
+                  child: Divider(thickness: 1, color: Colors.grey[300]),
+                ),
+              ],
+            ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -112,7 +137,12 @@ class _D02State extends State<D02> {
                 GestureDetector(
                   onTap: () {},
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => D03()),
+                      );
+                    },
                     child: Text(
                       'Register now',
                       style: TextStyle(

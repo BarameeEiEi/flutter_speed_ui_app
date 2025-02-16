@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/e03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e05_page_ui.dart';
 
 class E04 extends StatefulWidget {
   const E04({super.key});
@@ -30,7 +32,6 @@ class _E04State extends State<E04> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: IconButton(
-                      color: Colors.grey,
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -81,7 +82,12 @@ class _E04State extends State<E04> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => E05()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
@@ -109,7 +115,12 @@ class _E04State extends State<E04> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => E03()),
+                          );
+                        },
                         child: Text(
                           'Create Account',
                           style: TextStyle(

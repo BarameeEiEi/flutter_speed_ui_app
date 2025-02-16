@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d07_page_ui.dart';
 
 class D06 extends StatefulWidget {
   const D06({super.key});
@@ -80,7 +81,12 @@ class _D06State extends State<D06> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D07()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 child: Text(
                   'Reset Password',

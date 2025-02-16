@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/c02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class C01 extends StatefulWidget {
   const C01({super.key});
@@ -9,11 +11,41 @@ class C01 extends StatefulWidget {
 
 class _C01State extends State<C01> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      Duration(seconds: 3),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => C02(),
+        ),
+      ),
+    );
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeUI()),
+                );
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                size: MediaQuery.of(context).size.height * 0.04,
+                color: const Color.fromARGB(255, 0, 0, 0),
+              ),
+            ),
+          ),
           Image.asset(
             'assets/images/imgc1.png',
             fit: BoxFit.cover,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/e02_page_ui.dart';
 
 class E06 extends StatefulWidget {
   const E06({super.key});
@@ -87,7 +88,12 @@ class _E06State extends State<E06> {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => E02()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(

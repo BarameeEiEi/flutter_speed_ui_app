@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/b02_page_ui.dart';
 
 class B03 extends StatefulWidget {
   const B03({super.key});
@@ -19,6 +20,19 @@ class _B03State extends State<B03> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: MediaQuery.of(context).size.height * 0.04,
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                ),
                 Text(
                   "Create Account",
                   style: TextStyle(
@@ -85,7 +99,12 @@ class _B03State extends State<B03> {
                 ),
                 SizedBox(height: 16),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => B02()),
+                    );
+                  },
                   child: Text(
                     "Already have an account",
                     style: TextStyle(color: Colors.black54),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/d05_page_ui.dart';
 
 class D04 extends StatefulWidget {
   const D04({super.key});
@@ -66,7 +68,12 @@ class _D04State extends State<D04> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => D05()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 child: Text(
                   'Send Code',
@@ -82,7 +89,12 @@ class _D04State extends State<D04> {
                 GestureDetector(
                   onTap: () {},
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => D02()),
+                      );
+                    },
                     child: Text(
                       'Login',
                       style: TextStyle(

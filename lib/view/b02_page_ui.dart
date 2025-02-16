@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/b03_page_ui.dart';
 
 class B02 extends StatefulWidget {
   const B02({super.key});
@@ -19,6 +20,19 @@ class _B02State extends State<B02> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      size: MediaQuery.of(context).size.height * 0.04,
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                    ),
+                  ),
+                ),
                 Text(
                   "Login here",
                   style: TextStyle(
@@ -83,7 +97,12 @@ class _B02State extends State<B02> {
                 ),
                 SizedBox(height: 16),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => B03()),
+                    );
+                  },
                   child: Text(
                     "Create new account",
                     style: TextStyle(color: Colors.black54),

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/d03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e01_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/e04_page_ui.dart';
 
 class E02 extends StatefulWidget {
   const E02({super.key});
@@ -31,7 +35,10 @@ class _E02State extends State<E02> {
                     alignment: Alignment.centerLeft,
                     child: IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => E01()),
+                        );
                       },
                       icon: Icon(
                         Icons.arrow_back_ios,
@@ -99,7 +106,12 @@ class _E02State extends State<E02> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => E04()),
+                            );
+                          },
                           child: Text(
                             'Forgot Password?',
                             style: TextStyle(
@@ -135,7 +147,18 @@ class _E02State extends State<E02> {
                   Row(
                     children: [
                       Expanded(
-                        child: Divider(thickness: 1, color: Colors.grey[300]),
+                        child: Container(
+                          height: 1,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(0, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10),
@@ -145,7 +168,18 @@ class _E02State extends State<E02> {
                         ),
                       ),
                       Expanded(
-                        child: Divider(thickness: 1, color: Colors.grey[300]),
+                        child: Container(
+                          height: 1,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(128, 255, 165, 0),
+                                Color.fromARGB(0, 255, 165, 0),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -187,7 +221,12 @@ class _E02State extends State<E02> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => E03()),
+                          );
+                        },
                         child: Text(
                           'Create Account',
                           style: TextStyle(

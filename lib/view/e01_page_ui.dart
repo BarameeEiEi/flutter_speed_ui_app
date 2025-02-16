@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/e02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/home_ui.dart';
 
 class E01 extends StatefulWidget {
   const E01({super.key});
@@ -18,20 +20,59 @@ class _E01State extends State<E01> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeUI()),
+                  );
+                },
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  size: MediaQuery.of(context).size.height * 0.04,
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                ),
+              ),
+            ),
             Image.asset(
               'assets/images/imge1.png', // Replace with your image asset path
               height: 400,
             ),
             SizedBox(height: 20),
-            Text(
-              'BERRY JUICE',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Serif',
-              ),
-              textAlign: TextAlign.center,
+
+            // ข้อความ BERRY JUICE มีขอบสีส้ม
+            Stack(
+              children: [
+                // ข้อความขอบสีส้ม (วางซ้อนเป็นเลเยอร์ล่าง)
+                Text(
+                  'BERRY JUICE',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Serif',
+                    foreground: Paint()
+                      ..style = PaintingStyle.stroke
+                      ..strokeWidth = 4
+                      ..color = Colors.orange, // สีขอบ
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                // ข้อความปกติ (วางซ้อนเป็นเลเยอร์บน)
+                Text(
+                  'BERRY JUICE',
+                  style: TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Serif',
+                    color: Colors.black, // สีของตัวหนังสือ
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
+
             SizedBox(height: 10),
             Text(
               'A "Moments of healthy sip"\nThe best vitamin for your health',
@@ -44,7 +85,12 @@ class _E01State extends State<E01> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => E02()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
                   shape: RoundedRectangleBorder(

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:iot_thai_moneyshare_project/view/b02_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/b03_page_ui.dart';
+import 'package:iot_thai_moneyshare_project/view/c02_page_ui.dart';
 
 class C03 extends StatefulWidget {
   const C03({super.key});
@@ -19,7 +22,19 @@ class _C03State extends State<C03> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 50),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: MediaQuery.of(context).size.height * 0.04,
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ),
+              ),
               Align(
                 alignment: Alignment.topRight,
                 child: Container(
@@ -127,7 +142,7 @@ class _C03State extends State<C03> {
                     ),
                   ),
                   child: Text(
-                    "SIGN UP",
+                    "SIGN IN",
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
@@ -168,7 +183,12 @@ class _C03State extends State<C03> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => C02()),
+                      );
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(

@@ -40,7 +40,7 @@ class _flutter_speed_ui_appState extends State<flutter_speed_ui_app> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: A01(),
+      home: HomeUI(),
     );
   }
 }
