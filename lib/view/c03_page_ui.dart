@@ -29,7 +29,7 @@ class _C03State extends State<C03> {
                   icon: Icon(
                     Icons.arrow_back_ios,
                     size: MediaQuery.of(context).size.height * 0.04,
-                    color: const Color.fromARGB(255, 0, 0, 0),
+                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
               ),

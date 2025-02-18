@@ -21,7 +21,8 @@ class _D01State extends State<D01> {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/imgd1.png'),
+                  image: AssetImage(
+                      'assets/images/imgd1.png'), //ของผมใช้เป็นวิธีการตัดขอบรูป
                   fit: BoxFit.cover,
                 ),
               ),
@@ -39,7 +40,7 @@ class _D01State extends State<D01> {
               icon: Icon(
                 Icons.arrow_back_ios,
                 size: MediaQuery.of(context).size.height * 0.04,
-                color: const Color.fromARGB(255, 0, 0, 0),
+                color: Color.fromARGB(255, 0, 0, 0),
               ),
             ),
           ),
@@ -68,7 +69,7 @@ class _D01State extends State<D01> {
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 14),
-                          backgroundColor: Color(0xFF212121), // สีเทาเข้ม
+                          backgroundColor: Color(0xFF212121),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),

@@ -35,10 +35,13 @@ class _D02State extends State<D02> {
                 ),
               ),
             ),
-            Text(
-              'Welcome back! \n Glad to see you, Again!',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Welcome back! \n Glad to see you, Again!',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
             ),
             SizedBox(height: 30),
             TextField(
